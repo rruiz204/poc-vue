@@ -27,6 +27,7 @@ const onSubmit = (payload: any) => {
   const { name, title, description, status, priority } = payload.values;
   record = { ...record, name, title, description, status, priority };
   store.update(record);
+  emit('update:visible');
 };
 
 const emit = defineEmits(["update:visible"]);
