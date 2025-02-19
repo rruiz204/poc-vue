@@ -7,6 +7,7 @@ import type { Project } from "@core/models/Project";
 const Gacela: Project = {
   id: 1,
   name: "Gacela",
+  title: "Gestión de proyectos de software",
   description: "Gacela es un sistema de gestión de proyectos de software diseñado para mejorar la organización, el seguimiento y la colaboración en equipos de desarrollo. Proporciona herramientas para la planificación de tareas, priorización y monitoreo del progreso en tiempo real.",
   priority: Priority.Mid,
   status: Status.Progress,
@@ -28,6 +29,7 @@ const Gacela: Project = {
 const Gesmia: Project = {
   id: 2,
   name: "Gesmia",
+  title: "App de seguridad y monitoreo",
   description: "Gesmia es una aplicación móvil de seguridad diseñada para ayudar a las personas a monitorear la ubicación de sus seres queridos en tiempo real. Permite crear círculos de confianza, recibir alertas sobre posibles peligros cercanos, mejorando la seguridad y tranquilidad de los usuarios.",
   priority: Priority.High,
   status: Status.Progress,
@@ -45,9 +47,10 @@ const Gesmia: Project = {
   ],
 };
 
-const Holdex = {
+const Holdex: Project = {
   id: 3,
   name: "Holdex",
+  title: "Plataforma web de blockchain",
   description: "Holdex es una aplicación web enfocada en el ecosistema blockchain. Ofrece herramientas para la gestión de activos digitales, seguimiento de transacciones y análisis de tendencias en el mercado cripto, proporcionando una experiencia intuitiva y segura para los usuarios.",
   priority: Priority.Low,
   status: Status.Completed,
@@ -62,9 +65,10 @@ const Holdex = {
   ],
 };
 
-const Nitel = {
+const Nitel: Project = {
   id: 4,
   name: "Nitel",
+  title: "Sistema de análisis financiero",
   description: "Nitel es un sistema de análisis y visualización de datos financieros basado en gráficos interactivos. Permite a los usuarios monitorear el rendimiento del mercado, realizar análisis técnicos y tomar decisiones informadas a través de herramientas avanzadas de charting y visualización de tendencias económicas.",
   priority: Priority.Low,
   status: Status.Pending,
