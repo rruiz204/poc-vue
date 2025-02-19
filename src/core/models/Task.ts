@@ -6,7 +6,6 @@ export interface Task {
   name: string;
   status: Status;
   priority: Priority;
-  description: string;
   created_at: Date;
   due_date: Date;
 };

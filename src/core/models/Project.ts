@@ -7,6 +7,7 @@ import { Priority } from "@core/enums/Priority";
 export interface Project {
   id: number;
   name: string;
+  title: string;
   status: Status;
   priority: Priority;
   description: string;
