@@ -33,21 +33,25 @@ const emit = defineEmits(["update:visible"]);
 </script>
 
 <template>
-  <Dialog :visible="visible" @update:visible="emit('update:visible', $event)" modal header="Editar proyecto" class="w-[800px]">
-    <Form v-slot="$form" :resolver="EditProjectSchema" @submit="onSubmit" :initial-values="project">
+  <Dialog :visible="visible" @update:visible="emit('update:visible', $event)" modal header="Editar proyecto"
+    class="w-[800px]">
+    <Form v-slot="$form" :resolver="EditProjectSchema" @submit="onSubmit" :initial-values="project"
+      class="flex flex-col gap-4">
 
-      <div>
-        <InputText name="name" type="text" placeholder="Nombre" />
-        <Message v-if="$form.name?.invalid" severity="error" size="small" variant="simple">
-          {{ $form.name.error.message }}
-        </Message>
-      </div>
+      <div class="flex gap-6">
+        <div class="flex-1">
+          <InputText name="name" type="text" placeholder="Nombre" fluid />
+          <Message v-if="$form.name?.invalid" severity="error" size="small" variant="simple">
+            {{ $form.name.error.message }}
+          </Message>
+        </div>
 
-      <div>
-        <InputText name="title" type="text" placeholder="Titulo" />
-        <Message v-if="$form.title?.invalid" severity="error" size="small" variant="simple">
-          {{ $form.title.error.message }}
-        </Message>
+        <div class="flex-1">
+          <InputText name="title" type="text" placeholder="Titulo" fluid />
+          <Message v-if="$form.title?.invalid" severity="error" size="small" variant="simple">
+            {{ $form.title.error.message }}
+          </Message>
+        </div>
       </div>
 
       <div>
@@ -57,18 +61,20 @@ const emit = defineEmits(["update:visible"]);
         </Message>
       </div>
 
-      <div>
-        <Select name="status" placeholder="Seleccionar Status" :options="status" />
-        <Message v-if="$form.status?.invalid" severity="error" size="small" variant="simple">
-          {{ $form.status.error.message }}
-        </Message>
-      </div>
+      <div class="flex gap-6">
+        <div class="flex-1">
+          <Select name="status" placeholder="Seleccionar Status" :options="status" fluid />
+          <Message v-if="$form.status?.invalid" severity="error" size="small" variant="simple">
+            {{ $form.status.error.message }}
+          </Message>
+        </div>
 
-      <div>
-        <Select name="priority" placeholder="Seleccionar Prioridad" :options="priority" />
-        <Message v-if="$form.priority?.invalid" severity="error" size="small" variant="simple">
-          {{ $form.priority.error.message }}
-        </Message>
+        <div class="flex-1">
+          <Select name="priority" placeholder="Seleccionar Prioridad" :options="priority" fluid />
+          <Message v-if="$form.priority?.invalid" severity="error" size="small" variant="simple">
+            {{ $form.priority.error.message }}
+          </Message>
+        </div>
       </div>
 
       <Button type="submit" severity="secondary" label="Guardar" />
