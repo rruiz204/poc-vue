@@ -24,7 +24,6 @@ export class TaskFactory {
       id: id, name: name,
       status: faker.helpers.enumValue(Status),
       priority: faker.helpers.enumValue(Priority),
-      description: faker.lorem.paragraph(),
       created_at: createdAt,
       due_date: dueDate,
     };
